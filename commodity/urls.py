@@ -3,6 +3,6 @@ from .views import *
 
 
 urlpatterns = [
-    path('.html', commodityView, {'user': 'admin'}, name='commodity'),
-    path('/detail.<int:id>.html', detailView, name='detail'),
+    path('.html', commodityView, name='commodity'),
+    path('detail.<int:id>.html', detailView, name='detail'),
 ]
