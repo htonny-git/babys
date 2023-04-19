@@ -23,8 +23,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # 添加项目应用 index、commodity 和 shopper 的 urls.py
     path('', include(('index.urls', 'index'), namespace='index')),
-    path('commodity', include(('commodity.urls', 'commodity'), namespace='commodity')),
-    path('shopper', include(('shopper.urls', 'shopper'), namespace='shopper')),
+    path('commodity/', include(('commodity.urls', 'commodity'), namespace='commodity')),
+    path('shopper/', include(('shopper.urls', 'shopper'), namespace='shopper')),
     # 配置媒体资源的路由信息
     re_path('media/(?P<path>.*)', serve,
             {'document_root': settings.MEDIA_ROOT}, name='media'),
